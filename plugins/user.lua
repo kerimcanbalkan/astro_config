@@ -7,4 +7,10 @@ return {
     event = "BufRead",
     config = function() require("lsp_signature").setup() end,
   },
+  {
+    "craftzdog/solarized-osaka.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {},
+  },
 }

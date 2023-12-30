@@ -14,6 +14,7 @@ return {
       "gitignore",
       "tsx",
       "go",
+      "python",
     })
   end,
 }
