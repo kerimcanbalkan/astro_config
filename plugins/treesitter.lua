@@ -13,8 +13,8 @@ return {
       "svelte",
       "gitignore",
       "tsx",
+      "dockerfile",
       "go",
-      "python",
     })
   end,
 }
