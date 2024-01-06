@@ -30,6 +30,8 @@ return {
     -- tables with the `name` key will be registered with which-key if it's installed
     -- this is useful for naming menus
     ["<leader>b"] = { name = "Buffers" },
+    ["sv"] = { ":vsplit<Return>", desc = "Split Vertically" },
+    ["ss"] = { ":split<Return>", desc = "Split Vertically" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
   },
