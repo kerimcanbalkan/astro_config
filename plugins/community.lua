@@ -3,10 +3,9 @@ return {
   "AstroNvim/astrocommunity",
   -- example of importing a plugin, comment out to use it or add your own
   -- available plugins can be found at https://github.com/AstroNvim/astrocommunity
-
   { import = "astrocommunity.colorscheme.catppuccin" },
-  { import = "astrocommunity.completion.copilot-lua-cmp" },
   { import = "astrocommunity.pack.go" },
+  { import = "astrocommunity.pack.rust" },
   { import = "astrocommunity.pack.svelte" },
   { import = "astrocommunity.pack.tailwindcss" },
   { import = "astrocommunity.pack.python" },
@@ -16,6 +15,9 @@ return {
   { import = "astrocommunity.pack.godot" },
   { import = "astrocommunity.pack.cs" },
   { import = "astrocommunity.pack.astro" },
-  { import = "astrocommunity.colorscheme.gruvbox-nvim" },
+  { import = "astrocommunity.pack.docker" },
   { import = "astrocommunity.terminal-integration.flatten-nvim" },
+  { import = "astrocommunity.editing-support.vim-move" },
+  { import = "astrocommunity.colorscheme.rose-pine" },
+  { import = "astrocommunity.bars-and-lines.lualine-nvim" },
 }

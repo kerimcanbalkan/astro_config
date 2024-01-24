@@ -2,23 +2,53 @@ return {
   -- customize alpha options
   {
     "goolord/alpha-nvim",
-    opts = function(_, opts)
-      -- customize the dashboard header
+    opts = function(_, opts) -- override the options using lazy.nvim
       opts.section.header.val = {
-        " █████  ███████ ████████ ██████   ██████",
-        "██   ██ ██         ██    ██   ██ ██    ██",
-        "███████ ███████    ██    ██████  ██    ██",
-        "██   ██      ██    ██    ██   ██ ██    ██",
-        "██   ██ ███████    ██    ██   ██  ██████",
-        " ",
-        "    ███    ██ ██    ██ ██ ███    ███",
-        "    ████   ██ ██    ██ ██ ████  ████",
-        "    ██ ██  ██ ██    ██ ██ ██ ████ ██",
-        "    ██  ██ ██  ██  ██  ██ ██  ██  ██",
-        "    ██   ████   ████   ██ ██      ██",
+        [[                                                                       ]],
+        [[                                                                     ]],
+        [[       ████ ██████           █████      ██                     ]],
+        [[      ███████████             █████                             ]],
+        [[      █████████ ███████████████████ ███   ███████████   ]],
+        [[     █████████  ███    █████████████ █████ ██████████████   ]],
+        [[    █████████ ██████████ █████████ █████ █████ ████ █████   ]],
+        [[  ███████████ ███    ███ █████████ █████ █████ ████ █████  ]],
+        [[ ██████  █████████████████████ ████ █████ █████ ████ ██████ ]],
+        [[                                                                       ]],
       }
-      return opts
+
+      opts.config.layout = {
+        { type = "padding", val = vim.fn.max { 2, vim.fn.floor(vim.fn.winheight(0) * 0.2) } },
+        opts.section.header,
+        { type = "padding", val = 2 },
+        opts.section.buttons,
+        { type = "padding", val = 0 },
+        opts.section.footer,
+      }
     end,
+  },
+
+  {
+
+    "nvim-lualine/lualine.nvim",
+    event = { "BufReadPost", "BufNewFile", "VeryLazy" },
+    lazy = false,
+    enabled = true,
+    opts = {
+      theme = "catppuccin",
+      globalstatus = true,
+      icons_enabled = true,
+      disbled_filetypes = {
+        statusline = {
+          "alfa-nvim",
+          "help",
+          "neo-tree",
+          "Trouble",
+          "spectre_panel",
+          "toggleterm",
+        },
+        winbar = {},
+      },
+    },
   },
   -- You can disable default plugins as follows:
   -- { "max397574/better-escape.nvim", enabled = false },
